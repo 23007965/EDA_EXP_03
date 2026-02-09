@@ -1,12 +1,12 @@
-**EXP 3 - Delhi Air Quality Analysis**
+# EXP 3 - Delhi Air Quality Analysis
 
-**Aim**
+## Aim
 
 
 To compare air quality parameters in Delhi across different stations and analyze the relationship between pollutants (e.g., PM2.5 and NO₂) using scatter plots and correlation analysis.
 
 
-**Procedure / Algorithm**
+## Procedure / Algorithm
 
 1)Load the dataset using pandas.
 
@@ -25,16 +25,16 @@ To compare air quality parameters in Delhi across different stations and analyze
 8)Interpret the results — identify which pollutants are correlated and which stations are most polluted.
 
 
-**Program**
+## Program
 
 **Name : **
 
 **Reg No:**
 
-#Write your code here
 
 
-**Output**
+
+## Output
 
 **Interpretation**
 
@@ -42,7 +42,7 @@ To compare air quality parameters in Delhi across different stations and analyze
 
 2)  # write other insights
 
-**Result**
+## Result**
 
 The dataset was successfully loaded and processed to extract pollutant-wise and station-wise air quality data for Delhi.
 
