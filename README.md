@@ -1,3 +1,7 @@
+```
+Name : P PARTHIBAN
+Register number : 212223230145
+```
 # EXP 3 - Delhi Air Quality Analysis
 
 ## Aim
@@ -27,9 +31,9 @@ To compare air quality parameters in Delhi across different stations and analyze
 
 ## Program
 
-**Name : **
+### Name : P PARTHIBAN
 
-**Reg No:**
+### Reg No: 212223230145
 
 
 
