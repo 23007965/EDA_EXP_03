@@ -162,13 +162,13 @@ print(top5_days, "\n")
 <img width="762" height="172" alt="image" src="https://github.com/user-attachments/assets/6aaeaab8-926c-4363-b059-af5fe57f9131" />
 
 
-**Interpretation**
+## Interpretation 
 
-1)PM2.5 and NO₂ show a strong positive correlation, suggesting that both pollutants increase together, likely due to vehicle and industrial emissions.
+1) PM2.5 and NO₂ show a strong positive correlation, suggesting that both pollutants increase together, likely due to vehicle and industrial emissions.
 
 2) PM2.5 levels drop significantly during monsoon months, peak in winter due to stagnant air and emissions, and show higher concentrations during traffic hours, highlighting the impact of weather and human activity on pollution.
 
-## Result**
+## Result
 
 The dataset was successfully loaded and processed to extract pollutant-wise and station-wise air quality data for Delhi.
 
