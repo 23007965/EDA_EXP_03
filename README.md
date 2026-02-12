@@ -166,7 +166,7 @@ print(top5_days, "\n")
 
 1)PM2.5 and NO₂ show a strong positive correlation, suggesting that both pollutants increase together, likely due to vehicle and industrial emissions.
 
-2)  # write other insights
+2) PM2.5 levels drop significantly during monsoon months, peak in winter due to stagnant air and emissions, and show higher concentrations during traffic hours, highlighting the impact of weather and human activity on pollution.
 
 ## Result**
 
