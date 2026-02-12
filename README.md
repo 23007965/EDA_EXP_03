@@ -132,6 +132,23 @@ print(top5_days, "\n")
 ```
 ## Output
 
+<img width="742" height="227" alt="image" src="https://github.com/user-attachments/assets/6e3b6e6b-e2ce-4bd2-a70d-3db9279524e9" />
+
+<img width="790" height="572" alt="image" src="https://github.com/user-attachments/assets/1fccd579-6d04-4ba9-81e5-5c7ca5f68b92" />
+
+<img width="1117" height="464" alt="image" src="https://github.com/user-attachments/assets/99f5bf30-6e02-44a1-ae1e-8d02982cf9c6" />
+
+<img width="1477" height="664" alt="image" src="https://github.com/user-attachments/assets/ea8d1593-1391-4d99-b6dd-2e90cf3c89ec" />
+
+<img width="1172" height="565" alt="image" src="https://github.com/user-attachments/assets/16ba1d32-b48b-4b2c-9add-b733a9fedd7c" />
+
+<img width="729" height="65" alt="image" src="https://github.com/user-attachments/assets/d52b6de8-2144-49d9-a589-4a6ab2de6d63" />
+
+<img width="1287" height="547" alt="image" src="https://github.com/user-attachments/assets/bd2fcbd3-cc2a-4a8c-b893-93e3b022a1a9" />
+
+<img width="762" height="172" alt="image" src="https://github.com/user-attachments/assets/6aaeaab8-926c-4363-b059-af5fe57f9131" />
+
+
 **Interpretation**
 
 1)PM2.5 and NO₂ show a strong positive correlation, suggesting that both pollutants increase together, likely due to vehicle and industrial emissions.
