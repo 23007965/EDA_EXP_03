@@ -35,7 +35,6 @@ To compare air quality parameters in Delhi across different stations and analyze
 
 ### Reg No: 212223230145
 
-## Load the dataset(head, data types, null counts).
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
