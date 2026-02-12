@@ -35,9 +35,101 @@ To compare air quality parameters in Delhi across different stations and analyze
 
 ### Reg No: 212223230145
 
+## Load the dataset(head, data types, null counts).
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df=pd.read_csv("/content/delhi_pm25_aqi.csv")
+df.head()
 
+print("First 5 rows:")
+print(df.head())
 
+print("\nData types and non-null counts:")
+print(df.info())
 
+print("\nNull values per column:")
+print(df.isnull().sum())
+
+df.shape
+```
+
+```python
+df['datetime'] = pd.to_datetime(
+df['period.datetimeFrom.utc'],
+errors='coerce'
+)
+
+df['value'] = pd.to_numeric(df['value'], errors='coerce')
+df = df.dropna(subset=['datetime', 'value'])
+```
+
+```python
+df['date'] = df['datetime'].dt.date
+df['month'] = df['datetime'].dt.month_name()
+df['hour'] = df['datetime'].dt.hour
+```
+```python
+plt.figure(figsize=(12,6))
+month_order = [
+'January','February','March','April','May','June',
+'July','August','September','October','November','December'
+]
+sns.boxplot(
+x='month',
+y='value',
+data=df,
+order=month_order
+)
+plt.xticks(rotation=45)
+plt.title("Monthly Distribution of PM2.5 – Delhi")
+plt.xlabel("Month")
+plt.ylabel("PM2.5 (µg/m³)")
+plt.tight_layout()
+plt.show()
+```
+
+```python
+monthly_avg = df.groupby('month')['value'].mean().reindex(month_order)
+plt.figure(figsize=(10,5))
+monthly_avg.plot(kind='bar')
+plt.title("Monthly Average PM2.5 – Delhi")
+plt.xlabel("Month")
+plt.ylabel("Average PM2.5 (µg/m³)")
+plt.tight_layout()
+plt.show()
+```
+
+```python
+WHO_LIMIT = 25
+# Daily average PM2.5
+daily_avg = df.groupby('date')['value'].mean()
+total_days = daily_avg.shape[0]
+exceed_days = (daily_avg > WHO_LIMIT).sum()
+percentage_exceed = (exceed_days / total_days) * 100
+print(f"Total days: {total_days}")
+print(f"Days exceeding WHO limit: {exceed_days}")
+print(f"Percentage of unsafe days: {percentage_exceed:.2f}%")
+```
+
+```python
+hourly_avg = df.groupby('hour')['value'].mean().reset_index()
+plt.figure(figsize=(10,5))
+sns.lineplot(x='hour', y='value', data=hourly_avg, marker='o')
+plt.title("Average PM2.5 by Hour of Day – Delhi")
+plt.xlabel("Hour of Day")
+plt.ylabel("PM2.5 (µg/m³)")
+plt.xticks(range(0,24))
+plt.tight_layout()
+plt.show()
+```
+
+```python
+top5_days = daily_avg.sort_values(ascending=False).head(5)
+print("=== TOP 5 WORST-POLLUTED DAYS ===")
+print(top5_days, "\n")
+```
 ## Output
 
 **Interpretation**
